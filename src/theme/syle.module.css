@@ -1,0 +1,10 @@
+.main {
+    margin-top: 20px;
+}
+
+.mainSection{
+    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
