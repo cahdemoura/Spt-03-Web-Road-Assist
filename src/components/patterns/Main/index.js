@@ -71,6 +71,7 @@ export default function Main() {
                     max-width:100%;
                     gap:24px;
                     margin:0 20px;
+                    margin-bottom:10px;
                 }
 
                 .teste{
