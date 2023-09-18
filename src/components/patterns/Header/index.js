@@ -6,28 +6,28 @@ import User from "@/components/User";
 
 export default function Header({ }) {
     return (
-        <header>
-            <div className="footer">
+        <>
+            <section className="header">
                 <div className="menu">
                     <ImagesComp src="/images/logo-porto1.png" width={89} height={20}></ImagesComp>
 
                     <ul className="navBar">
-                        <li><HyperLink href='/'>Sobre Nós</HyperLink></li>
-                        <li><HyperLink href='/'>Ajuda</HyperLink></li>
-                        <li><HyperLink href='/'>Blog</HyperLink></li>
-                        <li><HyperLink href='/'>Encontre um Corretor</HyperLink></li>
+                        <li><HyperLink paddingLR={"10px"} paddingTB={"5px"} href='/'>Sobre Nós</HyperLink></li>
+                        <li><HyperLink paddingLR={"10px"} paddingTB={"5px"} href='/'>Ajuda</HyperLink></li>
+                        <li><HyperLink paddingLR={"10px"} paddingTB={"5px"} href='/'>Blog</HyperLink></li>
+                        <li><HyperLink paddingLR={"10px"} paddingTB={"5px"} href='/'>Encontre um Corretor</HyperLink></li>
                     </ul>
                 </div>
 
                 <span className="navBar">
-                    <User > Usuario</User>
+                    <User >Usuario</User>
                 </span>
 
                 <span className="hamburguerMenu">
                     <Hamburguer />
                 </span>
 
-            </div>
+            </section>
 
             <div className="line"></div>
 
@@ -54,20 +54,22 @@ export default function Header({ }) {
                     display:flex;
                     align-items:center;
                     justify-content:center;
-                    gap:40px
+                    gap:40px;
                 }
 
-                .footer{
+                .header{
                     display:flex;
                     align-items:center;
                     justify-content:space-evenly;
+                    margin-top: 20px;
+                    margin-bottom:10px;
                 }
 
                 .line{
                     Max-width:100vw;
                     height:1px;
                     background:#00000080;
-                    margin:10px 0;
+                    margin-bottom:20px;
                 }
 
                 .hamburguerMenu{
@@ -83,14 +85,18 @@ export default function Header({ }) {
                     .hamburguerMenu{
                     display:Block;
                     }   
-                    .footer{
-                        justify-content: space-between;
-                        margin:0 16px;
+
+                    .header{
+                        margin-top: 20px;
+                        margin-bottom:10px;
+                        justify-content:space-between; 
+                        margin-left:20px;
+                        margin-right:20px;
                     }
                 }
 
             `}</style>
 
-        </header>
+        </>
     )
 }

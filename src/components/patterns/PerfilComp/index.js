@@ -1,15 +1,14 @@
 import ButtonMain from "@/components/ButtonMain";
-import HyperLink from "@/components/HyperLink";
 import Title from "@/components/Title";
 import Image from "next/image";
 
 
-export default function Main() {
+export default function PerfilComp() {
     return (
         <section className="section">
 
             <div className="main-section">
-                
+
                 <aside className="left-menu">
                     <ButtonMain href={"/formularios"}>Requisitar</ButtonMain>
                     <ButtonMain href={"/acompanhar"}>Acompanhar</ButtonMain>
@@ -18,12 +17,21 @@ export default function Main() {
                 </aside>
 
                 <aside className="right-menu">
-                    <Title tag={'h4'} textAlign={'left'} color={'black'}>Mapa</Title>
-                    <div className="teste"><Image src={"/images/map.png"} fill ></Image></div>
+                    <Title tag={'h4'} textAlign={'center'} color={'Acompanhamento'}>Perfil</Title>
+                    <div>
+                        <p></p>
+                    </div>
+
                 </aside>
             </div>
 
             <style jsx>{`
+                aside div{
+                    height: 70%;
+                    display: flex;
+                    align-items:center;
+                    justify-content:center;
+                }
                 .spanTeste{
                     border: 1px solid red;
                 }
@@ -47,6 +55,7 @@ export default function Main() {
                 }
 
                 .right-menu{
+                    
                     display:flex;
                     background-color:white;
                     padding:16px;

@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function HyperLink({ children, href }) {
+export default function HyperLink({ children, href, paddingTB, paddingLR }) {
     return (
         <>
             <Link href={href}>
@@ -16,7 +16,9 @@ export default function HyperLink({ children, href }) {
                     font-weight: 600;
                     line-height: normal;
                     text-decoration: none;     
-                    padding:5px 10px;                   
+                    padding:${paddingTB} ${paddingLR};      
+                    display: flex;
+                    align-items:center;
                 }
 
                 `}</style>

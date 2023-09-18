@@ -1,18 +1,44 @@
-export default function InputForm({ placeholder }) {
+import Input from "../Input";
+
+export default function InputForm({ titulo, placeholder, name, type }) {
     return (
         <>
-            <input placeholder={placeholder}></input>
+            <label >
+                <p>{titulo}</p>
+                <div className="input">
+                    <Input type={type} name={name} placeholder={placeholder}></Input>
+                </div>
+            </label>
 
             <style jsx>{`
-                input{
+                .input{
                     display: flex;
-                    width: 306px;
+                    width: 100%;
                     padding: 8px;
                     align-items: center;
-                    gap: 8px;
                     border-radius: 10px;
-                    background: #FFF;
+                    background: white;
                 }
+
+                input{
+                    position: relative;
+                    font-size:14px;
+                    height: 100%;
+                    width: 100%;
+                    border: none;
+                    outline:none; 
+                }
+
+                p{
+                color: #000;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+                margin-bottom:6px;
+                }
+
+
                 `}
             </style>
         </>

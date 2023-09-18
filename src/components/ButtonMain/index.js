@@ -1,7 +1,11 @@
-export default function ButtonMain({ children }) {
+import HyperLink from "../HyperLink";
+
+export default function ButtonMain({ children, href }) {
     return (
         <>
-            <button>{children}</button>
+            <HyperLink href={href}>
+                <button>{children}</button>
+            </HyperLink>
 
             <style jsx>{`
                 button{

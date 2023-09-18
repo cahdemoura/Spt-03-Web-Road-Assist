@@ -1,25 +1,20 @@
+import BackButton from "@/components/BackButton";
 import ButtonMain from "@/components/ButtonMain";
-import HyperLink from "@/components/HyperLink";
+import ImagesComp from "@/components/ImagesComp";
+import SearchBar from "@/components/SearchBar";
 import Title from "@/components/Title";
 import Image from "next/image";
+import Link from "next/link";
 
-
-export default function Main() {
+export default function Map({hrefBack}) {
     return (
         <section className="section">
 
             <div className="main-section">
-                
-                <aside className="left-menu">
-                    <ButtonMain href={"/formularios"}>Requisitar</ButtonMain>
-                    <ButtonMain href={"/acompanhar"}>Acompanhar</ButtonMain>
-                    <ButtonMain href={"/perfil"}>Perfil</ButtonMain>
-                    <ButtonMain href={"/historico"}>Histórico</ButtonMain>
-                </aside>
-
                 <aside className="right-menu">
                     <Title tag={'h4'} textAlign={'left'} color={'black'}>Mapa</Title>
                     <div className="teste"><Image src={"/images/map.png"} fill ></Image></div>
+                    <span><BackButton href={hrefBack} cor={"blue"}></BackButton></span>
                 </aside>
             </div>
 
@@ -28,22 +23,11 @@ export default function Main() {
                     border: 1px solid red;
                 }
                 .main-section{
+                    position: relative;
                     display: flex;
-                    background-color:#BBD6FF;
                     border-radius:7px;
-                    border: 1px solid black;                    
-                    padding:16px;
-                    gap:16px;          
+                    border: 1px solid black;                           
                     box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.50);
-                }
-
-                .left-menu{
-                    display:flex;
-                    flex-direction: column;
-                    justify-content:center;
-                    align-items:center;
-                    padding:8px;
-                    gap:16px;
                 }
 
                 .right-menu{
@@ -54,9 +38,15 @@ export default function Main() {
                     display:flex;
                     flex-direction:column;
                     gap:8px;
-                    width:569px;
-                    max-width:569px;
-                    height:356px;            
+                    width:830px;
+                    max-width:792px;
+                    height:444px;            
+                }
+
+                span{
+                    position: absolute;
+                    top: 50px;
+                    left: 25px;
                 }
 
                 .section{
@@ -65,16 +55,16 @@ export default function Main() {
                     justify-content:center;
                     align-items:center;  
                     max-width:100%;
-                    gap:24px;
+                    gap:24px;     
                     margin-left:10px;
-                    margin-right:10px;
+                    margin-right:10px;       
                     margin-bottom:10px;
                 }
 
                 .teste{
                         position:relative;
                         width:100%;
-                        height:356px;
+                        height:444px;
                 }
 
                 @media (max-width:800px){
@@ -88,13 +78,6 @@ export default function Main() {
                     .right-menu{
                         width:100%;
                         min-width:356px;
-                    }
-
-                    .left-menu{
-                        display:grid;
-                        justify-content:center;
-                        align-items:center;
-                        grid-template-columns: 2fr 2fr
                     }
 
                     .teste{

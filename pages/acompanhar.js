@@ -3,20 +3,21 @@ import Header from "@/components/patterns/Header";
 import Main from "@/components/patterns/Main";
 import Title from "@/components/Title";
 import SearchBar from "@/components/SearchBar";
+import AcompanharComp from '@/components/patterns/AcompanharComp';
 
-export default function Home() {
+export default function Acompanhar() {
     return (
         <>
             <header>
                 <Header></Header>
             </header>
 
-            <main className={StyledPage.pageEstrutura}>
-                <section className={StyledPage.middle}>
+            <main className={StyledPage.teste}>
+                <section className={StyledPage.fff}>
                     <Title tag={'h1'} textAlign={'left'} color={'#00A1FC'}>Road Assist</Title>
                     <SearchBar SizeBar={"600px"}></SearchBar>
                 </section>
-                <Main></Main>
+                <AcompanharComp></AcompanharComp>
             </main>
         </>
     )
