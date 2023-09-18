@@ -12,8 +12,8 @@ export default function Acompanhar() {
                 <Header></Header>
             </header>
 
-            <main className={StyledPage.teste}>
-                <section className={StyledPage.fff}>
+            <main className={StyledPage.pageEstrutura}>
+                <section className={StyledPage.middle}>
                     <Title tag={'h1'} textAlign={'left'} color={'#00A1FC'}>Road Assist</Title>
                     <SearchBar SizeBar={"600px"}></SearchBar>
                 </section>
