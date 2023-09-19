@@ -18,13 +18,14 @@ export default function SearchBar({ SizeBar }) {
 
             <style jsx>{`
                 .bar{
+                    height: ;
                     display:flex;
                     justify-content: center;
                     align-items: center; 
                     flex-direction: row;
                     background: #D9D9D9; 
                     padding:4px 6px;
-                    border-radius:32px;
+                    border-radius:8px;
                     gap:8px;
                     max-width:${SizeBar};
                     margin: 0 10px;
@@ -56,7 +57,7 @@ export default function SearchBar({ SizeBar }) {
                 input{
                     padding:8px 16px;
                     border:none;
-                    border-radius:20px;
+                    border-radius:8px;
                     width:100%;
                 }
 

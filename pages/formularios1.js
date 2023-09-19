@@ -18,11 +18,13 @@ export default function Formularios1() {
                 <section className={styledPage.middle}>
                     <Title tag={'h1'} textAlign={'left'} color={'#00A1FC'}>Road Assist</Title>
                     <SearchBar SizeBar={"600px"}></SearchBar>
-                </section>
-                <Map hrefBack={"/formularios"}></Map>
-                
-                <span className={styledPage.form1}>
                     <Formulario1 hrefFoward={"/formularios2"}></Formulario1>
+                </section>
+                
+                <span className={styledPage.disapear}><Map className={styledPage.disapear} hrefBack={"/formularios"}></Map></span>
+               
+                <span className={styledPage.form1}>
+                   
                 </span>
 
             </main>

@@ -24,7 +24,7 @@ export default function InputWImages({ src, type, name, placeholder, children })
                     gap:8px;
                     padding: 8px;
                     width: 100%;
-                    border-radius:10px;                  
+                    border-radius:6px;                  
                     background: white;         
                 }
 
