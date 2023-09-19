@@ -6,24 +6,18 @@ import HyperLink from "@/components/HyperLink";
 import Title from "@/components/Title";
 import Image from "next/image";
 import BackButton from "@/components/BackButton";
-import {useState} from 'react'
+import { useState } from "react";
 
-let displayMainSection = "flex";
-let displayPhotoSection = "none";
+
 let backgroundImage = "";
 
-const [showElement, setShowElement] = useState(true)
-const showOrHide = () => setShowElement(false)
-
+const showElement = true
 
 function handleFileChange(event){
     if (event.target.files) {
     backgroundImage = event.target.files[0];
     }
-    showOrHide()
 };
-
-
 
 export default function FormularioFoto({ hrefFoward }) {
     return (
@@ -65,6 +59,9 @@ export default function FormularioFoto({ hrefFoward }) {
                             <input type="file" id="selecao-arquivo" onChange={handleFileChange}/>
                         </div>
                     </div>
+                    <HyperLink href={hrefFoward}>
+                        <Submit value={"Confirmar"}></Submit>
+                    </HyperLink>
                 </div>
 
                 :
@@ -78,9 +75,7 @@ export default function FormularioFoto({ hrefFoward }) {
                         />
                     </div>
 
-                    <HyperLink href={hrefFoward}>
-                        <Submit value={"Confirmar"}></Submit>
-                    </HyperLink>
+                    
                 </div>
             }
             
@@ -97,6 +92,13 @@ export default function FormularioFoto({ hrefFoward }) {
                     justifyContent: start; 
                 }
 
+                .attachPhoto{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                }
+
                 aside div{
                     height: 70%;
                     display: flex;
@@ -107,7 +109,7 @@ export default function FormularioFoto({ hrefFoward }) {
                     border: 1px solid red;
                 }
                 .main-section{
-                    display: ${displayMainSection};
+                    display: flex;
                     flex-direction: column;
                     align-items: center;
                     justify-content: center;
@@ -120,7 +122,7 @@ export default function FormularioFoto({ hrefFoward }) {
                 }
 
                 .section-photo{
-                    display: ${displayPhotoSection};
+                    display: flex;
                     flex-direction: column;
                     align-content: center;
                     justify-content: center;
