@@ -1,34 +1,68 @@
 import InputForm from "@/components/ImputForm";
-import TitleH1 from "@/components/Title";
 import Submit from "../Submit";
 import ButtonMain from "@/components/ButtonMain";
 import HyperLink from "@/components/HyperLink";
 import Title from "@/components/Title";
 import Image from "next/image";
+import BackButton from "@/components/BackButton";
+
+
+let backgroundImage = "/images/map.png";
+let displayMainSection = "flex";
+let displayPhotoSection = "none";
 
 export default function FormularioFoto({ hrefFoward }) {
     return (
         <section className="section">
 
             <div className="main-section">
+                <span>
+                    <BackButton href={"/"} cor={"white"}></BackButton>
+                </span>  
 
-                <aside className="left-menu">
-                    <ButtonMain href={"/formularios"}>Requisitar</ButtonMain>
-                    <ButtonMain href={"/acompanhar"}>Acompanhar</ButtonMain>
-                    <ButtonMain href={"/perfil"}>Perfil</ButtonMain>
-                    <ButtonMain href={"/historico"}>Histórico</ButtonMain>
-                </aside>
-
-                <aside className="right-menu">
-                    <Title tag={'h4'} textAlign={'center'} color={'Acompanhamento'}>Acompanhamento</Title>
-                    <div>
-                        <p>Nenhuma requisição feita</p>
+                <div className="attachPhoto">
+                    <Image
+                        src="/images/CameraIcon.svg"
+                        alt="Camera Icon"
+                        class="CameraIcon"
+                        width={120}
+                        height={120}
+                        priority
+                    />
+                    <div className="wrapper">
+                        <div className="textWrapper">
+                            <Title tag={'h1'} textAlign={'left'} color={'#00000'}>Fotografe ou filme!</Title>
+                            <p>   Fotografe ou filme, nossa camera IA ira fazer a leitura do seu caminhão, fazendo reconhecimento do modelo e possível problema, caso ele seja físico</p>
+                        </div>
                     </div>
-
-                </aside>
+                </div>
             </div>
 
+            <div className="section-photo">
+                    <div className="photo">
+                    <img
+                        src={backgroundImage}
+                        alt="Background Image"
+                        className="img"
+                    />
+                </div>
+
+                <HyperLink href={hrefFoward}>
+                    <Submit value={"Confirmar"}></Submit>
+                </HyperLink>
+            </div>
+               
+
             <style jsx>{`
+
+                span{
+                    display: flex;
+                    width: 100%;
+                    flex-direction: column;
+                    align-items: start;
+                    justifyContent: start; 
+                }
+
                 aside div{
                     height: 70%;
                     display: flex;
@@ -39,13 +73,33 @@ export default function FormularioFoto({ hrefFoward }) {
                     border: 1px solid red;
                 }
                 .main-section{
-                    display: flex;
+                    display: ${displayMainSection};
+                    flex-direction: column;
                     background-color:#BBD6FF;
                     border-radius:7px;
                     border: 1px solid black;                    
                     padding:16px;
                     gap:16px;          
                     box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.50);
+                }
+
+                .section-photo{
+                    display: ${displayPhotoSection};
+                    flex-direction: column;
+                    align-content: center;
+                    justify-content: center;
+                }
+
+                .photo{
+                    flex-direction: column;
+                    height: fit-content;
+                    width: fit-content;
+                }
+
+                .img{
+                    width: 500px;
+                    height: 300px;
+                    border-radius: 7px; 
                 }
 
                 .left-menu{
@@ -71,6 +125,30 @@ export default function FormularioFoto({ hrefFoward }) {
                     height:356px;            
                 }
 
+                .wrapper{
+                    display: flex;
+                    padding: 16px;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 8px;
+                    border-radius: 18px;
+                    border: 1px solid #C3C3C3;
+                    background: #FFF;
+                    box-shadow: 8px 8px 12px 0px rgba(0, 0, 0, 0.73);
+                }
+
+                .textWrapper{
+                    display: flex;
+                    padding: 16px 8px;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 16px;
+                    border-radius: 18px;
+                    background: var(--BlueLight, #BBD6FF);
+                }
+
                 .section{
                     display:flex;
                     flex-direction:column;
@@ -89,14 +167,20 @@ export default function FormularioFoto({ hrefFoward }) {
                         height:356px;
                 }
 
+                .CameraIcon{
+                    width: 200px;
+                    height: 200px;
+                }
+
                 @media (max-width:800px){
-                    .main-section{                    
+                    .main-section{              
                         flex-direction:column;
                         justify-content:center;
                         align-items:center;
                         width:100%;
                         min-width:360px;
                     }
+
                     .right-menu{
                         width:100%;
                         min-width:356px;

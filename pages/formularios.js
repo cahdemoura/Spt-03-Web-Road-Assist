@@ -19,7 +19,7 @@ export default function Formularios() {
                     <Title tag={'h1'} textAlign={'left'} color={'#00A1FC'}>Road Assist</Title>
                     <SearchBar SizeBar={"600px"}></SearchBar>
                 </section>
-                <Map hrefBack={"/"}></Map>
+                <Map hrefBack={"formularioFoto"}></Map>
                 
                 <span className={styledPage.form}>
                     <Formulario0 hrefFoward={"/formularios1"}></Formulario0>
