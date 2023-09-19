@@ -1,3 +1,4 @@
+
 import InputForm from "@/components/ImputForm";
 import Submit from "../Submit";
 import ButtonMain from "@/components/ButtonMain";
@@ -5,56 +6,89 @@ import HyperLink from "@/components/HyperLink";
 import Title from "@/components/Title";
 import Image from "next/image";
 import BackButton from "@/components/BackButton";
+import {useState} from 'react'
 
-
-let backgroundImage = "/images/map.png";
 let displayMainSection = "flex";
 let displayPhotoSection = "none";
+let backgroundImage = "";
+
+const [showElement, setShowElement] = useState(true)
+const showOrHide = () => setShowElement(false)
+
+
+function handleFileChange(event){
+    if (event.target.files) {
+    backgroundImage = event.target.files[0];
+    }
+    showOrHide()
+};
+
+
 
 export default function FormularioFoto({ hrefFoward }) {
     return (
         <section className="section">
+            {
+                showElement ?
+                <div className="main-section">
+                    <span>
+                        <BackButton href={"/"} cor={"white"}></BackButton>
+                    </span>  
 
-            <div className="main-section">
-                <span>
-                    <BackButton href={"/"} cor={"white"}></BackButton>
-                </span>  
+                    <div className="attachPhoto">
+                        <Image
+                            src="/images/CameraIcon.svg"
+                            alt="Camera Icon"
+                            class="CameraIcon"
+                            width={120}
+                            height={120}
+                            priority
+                        />
+                        <div className="wrapper">
+                            <div className="textWrapper">
+                                <Title tag={'h1'} textAlign={'left'} color={'#00000'}>Fotografe ou filme!</Title>
+                                <div className="pWrapper">
+                                    <p>Fotografe ou filme, nossa camera IA ira fazer a leitura do seu caminhão, fazendo reconhecimento do modelo e possível problema, caso ele seja físico</p>
+                                </div>
+                            </div>
 
-                <div className="attachPhoto">
-                    <Image
-                        src="/images/CameraIcon.svg"
-                        alt="Camera Icon"
-                        class="CameraIcon"
-                        width={120}
-                        height={120}
-                        priority
-                    />
-                    <div className="wrapper">
-                        <div className="textWrapper">
-                            <Title tag={'h1'} textAlign={'left'} color={'#00000'}>Fotografe ou filme!</Title>
-                            <p>   Fotografe ou filme, nossa camera IA ira fazer a leitura do seu caminhão, fazendo reconhecimento do modelo e possível problema, caso ele seja físico</p>
+                            <label className="inputFile" for='selecao-arquivo'>
+                                <Image
+                                    src="/images/PhotoIcon.svg"
+                                    alt="Photo Icon"
+                                    width={24}
+                                    height={24}
+                                    priority
+                                />
+                                <p className="inputFileText">Carregar Foto/video</p>
+                                </label>
+                            <input type="file" id="selecao-arquivo" onChange={handleFileChange}/>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div className="section-photo">
+                :
+
+                <div className="section-photo">
                     <div className="photo">
-                    <img
-                        src={backgroundImage}
-                        alt="Background Image"
-                        className="img"
-                    />
-                </div>
+                        <img
+                            src={backgroundImage}
+                            alt="Background Image"
+                            className="img"
+                        />
+                    </div>
 
-                <HyperLink href={hrefFoward}>
-                    <Submit value={"Confirmar"}></Submit>
-                </HyperLink>
-            </div>
+                    <HyperLink href={hrefFoward}>
+                        <Submit value={"Confirmar"}></Submit>
+                    </HyperLink>
+                </div>
+            }
+            
+
+            
                
 
             <style jsx>{`
-
                 span{
                     display: flex;
                     width: 100%;
@@ -75,11 +109,13 @@ export default function FormularioFoto({ hrefFoward }) {
                 .main-section{
                     display: ${displayMainSection};
                     flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
                     background-color:#BBD6FF;
                     border-radius:7px;
                     border: 1px solid black;                    
                     padding:16px;
-                    gap:16px;          
+                    gap:16px;
                     box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.50);
                 }
 
@@ -100,6 +136,20 @@ export default function FormularioFoto({ hrefFoward }) {
                     width: 500px;
                     height: 300px;
                     border-radius: 7px; 
+                }
+
+                input[type='file'] {
+                    display: none
+                  }
+
+                .inputFileText{
+                    color: #000;
+                    text-align: center;
+                    font-family: Raleway;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
                 }
 
                 .left-menu{
@@ -149,6 +199,37 @@ export default function FormularioFoto({ hrefFoward }) {
                     background: var(--BlueLight, #BBD6FF);
                 }
 
+                .pWrapper{
+                    display: flex;
+                    width: 285px;
+                    padding: 8px;
+                    align-items: center;
+                    gap: 8px;
+                    border-radius: 10px;
+                    background: #FFF;
+                }
+
+                p{
+                    color: #000;
+                    text-align: center;
+                    font-family: Raleway;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: normal;
+                }
+
+                .inputFile{
+                    display: flex;
+                    flex-direction: row;
+                    padding: 8px 17px;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 8px;
+                    border-radius: 7px;
+                    border: 6px solid var(--CorButton, #0046C0);
+                }
+
                 .section{
                     display:flex;
                     flex-direction:column;
@@ -173,7 +254,8 @@ export default function FormularioFoto({ hrefFoward }) {
                 }
 
                 @media (max-width:800px){
-                    .main-section{              
+                    .main-section{
+                        display: flex;              
                         flex-direction:column;
                         justify-content:center;
                         align-items:center;
