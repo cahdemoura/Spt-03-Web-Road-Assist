@@ -11,7 +11,7 @@ export default function Main() {
             <div className="main-section">
                 
                 <aside className="left-menu">
-                    <ButtonMain href={"/formularios"}>Requisitar</ButtonMain>
+                    <ButtonMain href={"/formularioFoto"}>Requisitar</ButtonMain>
                     <ButtonMain href={"/acompanhar"}>Acompanhar</ButtonMain>
                     <ButtonMain href={"/perfil"}>Perfil</ButtonMain>
                     <ButtonMain href={"/historico"}>Histórico</ButtonMain>
