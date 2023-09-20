@@ -26,7 +26,7 @@ export default function FormularioFoto({ hrefFoward }) {
                 showElement ?
                 <div className="main-section">
                     <span>
-                        <BackButton href={"/"} cor={"white"}></BackButton>
+                        <BackButton href={"/requisitosFotos"} cor={"white"}></BackButton>
                     </span>  
 
                     <div className="attachPhoto">
@@ -114,11 +114,12 @@ export default function FormularioFoto({ hrefFoward }) {
                     align-items: center;
                     justify-content: center;
                     background-color:#BBD6FF;
-                    border-radius:7px;
-                    border: 1px solid black;                    
+                    border-radius:3px;
+                    border: 1px solid #C3C3C3;                                     
                     padding:16px;
-                    gap:16px;
-                    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.50);
+                    gap:50px;
+                    box-shadow: 0px 12px 10px 0px rgba(95, 158, 255, 0.26);
+                    height:600px;
                 }
 
                 .section-photo{
@@ -184,20 +185,20 @@ export default function FormularioFoto({ hrefFoward }) {
                     justify-content: center;
                     align-items: center;
                     gap: 8px;
-                    border-radius: 18px;
+                    border-radius: 3px;
                     border: 1px solid #C3C3C3;
                     background: #FFF;
-                    box-shadow: 8px 8px 12px 0px rgba(0, 0, 0, 0.73);
+                    box-shadow: 0px 12px 10px 0px rgba(95, 158, 255, 0.26);
                 }
 
                 .textWrapper{
                     display: flex;
-                    padding: 16px 8px;
+                    padding: 16px 16px;
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
                     gap: 16px;
-                    border-radius: 18px;
+                    border-radius: 3px;
                     background: var(--BlueLight, #BBD6FF);
                 }
 
@@ -207,14 +208,13 @@ export default function FormularioFoto({ hrefFoward }) {
                     padding: 8px;
                     align-items: center;
                     gap: 8px;
-                    border-radius: 10px;
+                    border-radius: 6px;
                     background: #FFF;
                 }
 
                 p{
                     color: #000;
                     text-align: center;
-                    font-family: Raleway;
                     font-size: 14px;
                     font-style: normal;
                     font-weight: 500;

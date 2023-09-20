@@ -20,7 +20,7 @@ export default function Formularios() {
                     <Title tag={'h1'} textAlign={'left'} color={'#00A1FC'}>Road Assist</Title>
                     <SearchBar SizeBar={"600px"}></SearchBar>
                     <div className={styledPage.divBackButton}>
-                        <BackButton cor={"blue"} href={"/formularioFoto"}></BackButton>
+                        <BackButton cor={"blue"} href={"/requisitosFotos"}></BackButton>
                     </div>
                     <Formulario0 hrefFoward={"/formularios1"}></Formulario0>
                 </section>

@@ -20,7 +20,7 @@ export default function formularioFoto() {
                     <SearchBar SizeBar={"600px"}></SearchBar>
                 </section>
 
-                <FormularioFoto hrefFoward={'/formularios'}></FormularioFoto>                               
+                <FormularioFoto hrefFoward={'/requisitosFotos'}></FormularioFoto>                               
             </main>
         </>
     )

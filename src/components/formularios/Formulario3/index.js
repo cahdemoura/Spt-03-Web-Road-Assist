@@ -20,7 +20,7 @@ export default function Formulario3({ hrefFoward }) {
                     <textarea name="DescricaoProblema" placeholder="Descreva o problema ocorrido." rows="5"></textarea>
                 </div>
                 <HyperLink href={hrefFoward}>
-                    <Submit value={"Confirmar"}></Submit>
+                    <Submit value={"Finalizar"}></Submit>
                 </HyperLink>
 
             </form>
