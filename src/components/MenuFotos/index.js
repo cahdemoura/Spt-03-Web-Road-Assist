@@ -7,9 +7,9 @@ export function MenuFotos() {
     return (
         <div className="mainSection">
             <span><BackButton cor={"white"} href={"/"}></BackButton></span>
-            <TitleH1 tag={"h1"}>Entendo nossa solução</TitleH1>
+            <TitleH1 tag={"h1"}>Entendendo nossa solução</TitleH1>
             <img src="../images/TruckSide.svg" width={"308px"}></img>
-            <p>Nossa IA atráves de visão computacional irá capturar as informações essenciais sobre seu veículo. Tire uma foto da lateral do veiculo</p>
+            <p>Nossa IA atráves de visão computacional irá capturar as informações essenciais sobre seu veículo. Tire uma foto da lateral do veículo</p>
             <ButtonCamera>Tirar foto</ButtonCamera>
             <img src="../images/TruckFront.svg" width={"308px"}></img>
             <p>Agora tire uma foto frontal do veículo. Assim podemos calcular os dados e estar escolhendo o guincho apropriado para o seu veículo</p>
