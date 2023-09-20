@@ -5,14 +5,15 @@ export default function TitleH1({ children, tag, textAlign, color,blockSize}) {
             <Tag>{children}</Tag>
 
             <style jsx>{`
-                ${Tag}{
-                    
+                ${Tag}{                 
                     color: ${color};
                     text-align:${textAlign};
                     font-family: Raleway;
                     font-style: normal;
                     font-weight: 700;
                     line-height: normal; 
+                    font-size:22px;
+                    padding: 8px;
                 }
 
                 div{

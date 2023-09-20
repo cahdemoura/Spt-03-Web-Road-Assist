@@ -16,7 +16,7 @@ export default function InputForm({ titulo, placeholder, name, type }) {
                     width: 100%;
                     padding: 8px;
                     align-items: center;
-                    border-radius: 10px;
+                    border-radius: 6px;
                     background: white;
                 }
 

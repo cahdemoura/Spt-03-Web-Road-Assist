@@ -12,7 +12,6 @@ export default function Map({hrefBack}) {
 
             <div className="main-section">
                 <aside className="right-menu">
-                    <Title tag={'h4'} textAlign={'left'} color={'black'}>Mapa</Title>
                     <div className="teste"><Image src={"/images/map.png"} fill ></Image></div>
                     <span><BackButton href={hrefBack} cor={"blue"}></BackButton></span>
                 </aside>
@@ -26,8 +25,8 @@ export default function Map({hrefBack}) {
                     position: relative;
                     display: flex;
                     border-radius:7px;
-                    border: 1px solid black;                           
-                    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.50);
+                    border: 1px solid #C3C3C3;                                
+                    box-shadow: 0px 12px 10px 0px rgba(95, 158, 255, 0.26);
                 }
 
                 .right-menu{
@@ -45,7 +44,7 @@ export default function Map({hrefBack}) {
 
                 span{
                     position: absolute;
-                    top: 50px;
+                    top: 25px;
                     left: 25px;
                 }
 

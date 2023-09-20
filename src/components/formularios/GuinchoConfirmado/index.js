@@ -2,13 +2,12 @@ import TitleH1 from "@/components/Title";
 import ButtonBorder from "@/components/ButtonBorder";
 import ButtonMain from "@/components/ButtonMain";
 
-export default function GuinchoConfirmado({MapPage}) {
+export default function GuinchoConfirmado({ MapPage }) {
     return (
         <section>
             <form>
-            <div className="block">
-                    <TitleH1 tag={"h1"} textAlign={"center"}>Aguarde...</TitleH1>
-                </div>
+                <TitleH1 tag={"h1"} textAlign={"center"}>Aguarde...</TitleH1>
+
                 <div className="block">
                     <TitleH1 tag={"h2"} textAlign={"center"}>Seu guincho está a caminho!</TitleH1>
                     <img src="/images/Truck.svg" width="104px" height="104px" ></img>
@@ -16,8 +15,8 @@ export default function GuinchoConfirmado({MapPage}) {
                 </div>
 
                 <div>
-                <ButtonMain href={"/"}>Menu</ButtonMain>
-                <ButtonMain href={MapPage}>Ver no mapa</ButtonMain>
+                    <ButtonMain href={"/"}>Menu</ButtonMain>
+                    <ButtonMain href={MapPage}>Ver no mapa</ButtonMain>
 
                 </div>
             </form>
@@ -27,6 +26,8 @@ export default function GuinchoConfirmado({MapPage}) {
                     background: white;
                     padding: 8px;
                     font-size:14px;
+                    text-align:center;
+                    font-weight: 500; 
                     border-radius:10px;
                 }
                 div{
@@ -41,8 +42,9 @@ export default function GuinchoConfirmado({MapPage}) {
                     width: 350px;
                     background: white;
                     padding: 16px;
-                    border-radius:16px;
-                    box-shadow: 8px 8px 10px 0px rgba(0, 0, 0, 0.60);
+                    border-radius:3px;
+                    border: 1px solid #c3c3c3;
+                    box-shadow: 0px 12px 10px 0px rgba(95, 158, 255, 0.26);
                 }
 
                 .block{
@@ -52,8 +54,9 @@ export default function GuinchoConfirmado({MapPage}) {
                     gap: 16px;
                     padding: 16px;
                     background: #BBD6FF;  
-                    border-radius:16px;        
+                    border-radius:3px;        
                     width: 100%;
+                    margin-bottom: 10px ;
                 }
                 `}</style>
 

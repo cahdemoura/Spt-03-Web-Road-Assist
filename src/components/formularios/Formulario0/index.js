@@ -1,11 +1,13 @@
 import InputWImages from "@/components/InputWImages";
 import Submit from "../Submit";
 import HyperLink from "@/components/HyperLink";
+import TitleH1 from "@/components/Title";
 
 export default function Formulario0({ hrefFoward }) {
   return (
     <section>
       <form>
+        <TitleH1 tag={"h1"} textAlign={"center"}>Localização</TitleH1>
         <div className="block">
           <label>
             <InputWImages
@@ -51,8 +53,8 @@ export default function Formulario0({ hrefFoward }) {
         </div>
       </form>
 
-      <style jsx>
-        {`
+      <style jsx>{`
+
         .div-input{
             padding-top:20px;
             display:flex;
@@ -77,6 +79,7 @@ export default function Formulario0({ hrefFoward }) {
             background: #bbd6ff;
             border-radius: 3px;
             width: 100%;
+            margin-top:10px;
           }
 
           .formulario {

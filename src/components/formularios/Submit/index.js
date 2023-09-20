@@ -18,7 +18,6 @@ export default function Submit({ value }) {
                     border-radius: 7px;
                     border: none;
                     background: #0046C0;
-                    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.50);
                     margin: 0 auto;
 
                     transition: .5s ease-in-out;
@@ -26,7 +25,6 @@ export default function Submit({ value }) {
                 input:hover{
                     cursor: pointer;
                     transform: scale(.95);
-                    box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.50);
                 }
                 `}
             </style>

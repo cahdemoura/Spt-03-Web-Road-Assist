@@ -4,6 +4,7 @@ import Title from "@/components/Title";
 import SearchBar from "@/components/SearchBar";
 import Map from "@/components/patterns/Map";
 import Formulario1 from "@/components/formularios/Formulario1";
+import BackButton from "@/components/BackButton";
 
 
 
@@ -18,18 +19,24 @@ export default function Formularios1() {
                 <section className={styledPage.middle}>
                     <Title tag={'h1'} textAlign={'left'} color={'#00A1FC'}>Road Assist</Title>
                     <SearchBar SizeBar={"600px"}></SearchBar>
-                    <Formulario1 hrefFoward={"/formularios2"}></Formulario1>
+                    <div className={styledPage.divBackButton}>
+                        <BackButton cor={"blue"} href={"/formularios"}></BackButton>
+                    </div>
+                    <Formulario1 hrefFoward={"/formularios3"}></Formulario1>
+
                 </section>
-                
-                <span className={styledPage.disapear}><Map className={styledPage.disapear} hrefBack={"/formularios"}></Map></span>
-               
+
+                <span className={styledPage.disapear}>
+
+                </span>
+
                 <span className={styledPage.form1}>
-                   
+
                 </span>
 
             </main>
 
-            
+
 
         </>
     )

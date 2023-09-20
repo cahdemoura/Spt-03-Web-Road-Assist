@@ -22,13 +22,11 @@ export default function ButtonMain({ children, href }) {
                     color:white;
                     font-size:14px;
                     font-weight:700;
-                    box-shadow: 4px 4px 6px 0px rgba(0, 0, 0, 0.50);
                     transition:.5s ease-in-out;
                     
                 }
                 button:hover{
                     cursor:pointer;
-                    box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.50);
                     transform:scale(0.96);
                 }
                 

@@ -24,12 +24,13 @@ export default function BackButton({ cor,href }) {
                     align-items: center;
                     border-radius: 18px;
                     background:${color};
-                    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.50);
                     transition: 0.3s ease-in-out;
+                    box-shadow: 0px 12px 10px 0px rgba(95, 158, 255, 0.26);
                 }
 
                 button:hover{
                     cursor: pointer;
+                    box-shadow: 0px 6px 6px 0px rgba(95, 158, 255, 0.26);
                     transform: scale(0.95);
                 }
                 

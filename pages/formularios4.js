@@ -4,6 +4,7 @@ import Title from "@/components/Title";
 import SearchBar from "@/components/SearchBar";
 import Map from "@/components/patterns/Map";
 import GuinchoConfirmado from "@/components/formularios/GuinchoConfirmado";
+import BackButton from "@/components/BackButton";
 
 
 
@@ -18,11 +19,14 @@ export default function Formularios4() {
                 <section className={styledPage.middle}>
                     <Title tag={'h1'} textAlign={'left'} color={'#00A1FC'}>Road Assist</Title>
                     <SearchBar SizeBar={"600px"}></SearchBar>
+                    <div className={styledPage.divBackButton}>
+                        <BackButton cor={"blue"} href={"/formularios3"}></BackButton>
+                    </div>
+                    <GuinchoConfirmado MapPage={"/formularios5"}></GuinchoConfirmado>
                 </section>
-                <Map hrefBack={"/formularios3"}></Map>
                 
                 <span className={styledPage.form4}>
-                    <GuinchoConfirmado MapPage={"/formularios5"}></GuinchoConfirmado>
+                    
                 </span>
 
             </main>

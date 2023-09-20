@@ -18,7 +18,6 @@ export default function Main() {
                 </aside>
 
                 <aside className="right-menu">
-                    <Title tag={'h4'} textAlign={'left'} color={'black'}>Mapa</Title>
                     <div className="teste"><Image src={"/images/map.png"} fill ></Image></div>
                 </aside>
             </div>
@@ -31,10 +30,10 @@ export default function Main() {
                     display: flex;
                     background-color:#BBD6FF;
                     border-radius:7px;
-                    border: 1px solid black;                    
+                    border: 1px solid #C3C3C3;                  
                     padding:16px;
                     gap:16px;          
-                    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.50);
+                    box-shadow: 0px 12px 10px 0px rgba(95, 158, 255, 0.26);
                 }
 
                 .left-menu{

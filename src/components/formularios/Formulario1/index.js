@@ -7,26 +7,7 @@ export default function Formulario1({ hrefFoward }) {
   return (
     <section>
       <form>
-        <TitleH1 tag={"h1"} textAlign={"center"}>
-          Confirme seus dados
-        </TitleH1>
-        <TitleH1 tag={"h1"} textAlign={"center"}>
-          Cliente
-        </TitleH1>
-        <div className="block">
-          <InputForm
-            titulo={"Nome:"}
-            name="NomeCliente"
-            type="text"
-            placeholder={"Digite seu nome"}
-          ></InputForm>
-          <InputForm
-            titulo={"CPF:"}
-            name="CpfCliente"
-            type="text"
-            placeholder={"Digite seu número"}
-          ></InputForm>
-        </div>
+
         <TitleH1 tag={"h1"} textAlign={"center"}>
           Veículo
         </TitleH1>
@@ -89,6 +70,7 @@ export default function Formulario1({ hrefFoward }) {
           background: #bbd6ff;
           border-radius: 3px;
           width: 100%;
+          margin-bottom: 10px ;
         }
       `}</style>
     </section>
