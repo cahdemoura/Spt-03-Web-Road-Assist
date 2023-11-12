@@ -1,7 +1,7 @@
-export default function Input({ type, name, placeholder,value }) {
+export default function Input({ type, name, placeholder,value,func }) {
     return (
         <>
-            <input name={name} type={type} placeholder={placeholder} value={value}></input>
+            <input name={name} type={type} placeholder={placeholder} value={value} onChange={func}></input>
 
             <style jsx>{`
                 input{

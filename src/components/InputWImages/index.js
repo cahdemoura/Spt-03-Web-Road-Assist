@@ -1,12 +1,12 @@
 import Input from "../Input";
 
-export default function InputWImages({ src, type, name, placeholder, children }) {
+export default function InputWImages({ src, type, name, placeholder, children,value, funcChange }) {
     return (
         <>
             {children}
             <div className="input">
                 <img src={src}></img>
-                <Input type={type} name={name} placeholder={placeholder}></Input>
+                <Input type={type} name={name} placeholder={placeholder} value={value} func={funcChange}></Input>
             </div>
 
             <style jsx>{`

@@ -1,12 +1,12 @@
 import Input from "../Input";
 
-export default function InputForm({ titulo, placeholder, name, type,value }) {
+export default function InputForm({ titulo, placeholder, name, type,value,func }) {
     return (
         <>
             <label >
                 <p>{titulo}</p>
                 <div className="input">
-                    <Input type={type} name={name} placeholder={placeholder} value={value}></Input>
+                    <Input type={type} name={name} placeholder={placeholder} value={value} func={func}></Input>
                 </div>
             </label>
 

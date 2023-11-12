@@ -1,7 +1,7 @@
-export default function Submit({ value }) {
+export default function Submit({ value, type, func }) {
     return (
         <>
-            <input type="submit" value={value}></input>
+            <input type={type} value={value} onClick={func}></input>
 
             <style jsx>{`
                 input{

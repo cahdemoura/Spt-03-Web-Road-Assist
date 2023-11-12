@@ -9,7 +9,7 @@ export default function Main() {
         <section className="section">
 
             <div className="main-section">
-                
+
                 <aside className="left-menu">
                     <ButtonMain href={"/requisitosFotos"}>Requisitar</ButtonMain>
                     <ButtonMain href={"/acompanhar"}>Acompanhar</ButtonMain>
@@ -18,7 +18,16 @@ export default function Main() {
                 </aside>
 
                 <aside className="right-menu">
-                    <div className="teste"><Image src={"/images/map.png"} fill ></Image></div>
+                    <div className="teste">
+                        <Image src={"/images/map.png"}
+                            width={'1337'}
+                            height={'621'}
+                            style={{
+                                width: '100%',
+                                height: '100%',
+                                objectFit: 'cover',
+                            }} />
+                    </div>
                 </aside>
             </div>
 

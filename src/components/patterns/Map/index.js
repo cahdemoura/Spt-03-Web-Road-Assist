@@ -6,13 +6,23 @@ import Title from "@/components/Title";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Map({hrefBack}) {
+export default function Map({ hrefBack }) {
     return (
         <section className="section">
 
             <div className="main-section">
                 <aside className="right-menu">
-                    <div className="teste"><Image src={"/images/map.png"} fill ></Image></div>
+                    <div className="teste">
+                        <Image src={"/images/map.png"}
+                            width={'1337'}
+                            height={'621'}
+                            style={{
+                                width:'100%',
+                                height:'100%',
+                                objectFit: 'cover',
+                            }}
+                        />
+                    </div>
                     <span><BackButton href={hrefBack} cor={"blue"}></BackButton></span>
                 </aside>
             </div>
@@ -61,6 +71,7 @@ export default function Map({hrefBack}) {
                 }
 
                 .teste{
+                    overflow:hidden;
                         position:relative;
                         width:100%;
                         height:444px;
